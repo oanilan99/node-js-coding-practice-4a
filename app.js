@@ -84,11 +84,11 @@ app.put("/players/:playerId/", async (request, response) => {
   const { playerName, jerseyNumber, role } = playerDetails;
   const updatePlayerDetails = `
 UPDATE
-cricket_match
+cricket_team
 SET
-player_name = '${playerName}'
-jersey_number = ${jerseyNumber}
-role = '${role}'
+player_name = '${playerName}',
+jersey_number = ${jerseyNumber},
+role = '${role}',
 WHERE
 player_id = ${playerId};`;
 
